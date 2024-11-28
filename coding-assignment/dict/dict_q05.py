@@ -1,16 +1,9 @@
-# Define a function 'nested_dictionary' that takes three lists as input and creates a nested dictionary structure.
-def nested_dictionary(l1, l2, l3):
-     result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]
-     return result
-
-student_id = ["S001", "S002", "S003", "S004"] 
-student_name = ["Adina Park", "Leyton Marsh", "Duncan Boyle", "Saim Richards"] 
-student_grade = [85, 98, 89, 92]
-
-print("Original strings:")
-print(student_id)
-print(student_name)
-print(student_grade)
-
-print("Nested dictionary:")
-print(nested_dictionary(student_id, student_name, student_grade)) 
+def test(dictt, N):
+    result = sorted(dictt, key=dictt.get, reverse=True)[:N]
+    return result 
+dictt = {'a':5, 'b':14, 'c': 32, 'd':35, 'e':24, 'f': 100, 'g':57, 'h':8, 'i': 100}
+print("Original Dictionary:")
+print(dictt)
+N = int(input("Enter Number of Maximum Values you want to display"))
+print(N,"maximum value(s) in the said dictionary:")
+print(test(dictt, N))
